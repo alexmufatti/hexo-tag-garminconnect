@@ -1,6 +1,6 @@
 {
   "name": "hexo-tag-garminconnect",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "index",
   "dependencies": {},
   "description": "Embed garmin connect activity tag plugin for Hexo.",
