@@ -14,32 +14,24 @@ hexo.extend.tag.register('garmin', function(args, content){
                 postId = arg.slice(3).trim();
             }else if(arg.startsWith('url:')) {
                 var postURL = arg.slice(4).trim();
-                postId = postURL.match(/https\:\/\/www\.connect\.garmin\.com\/modern\/activity\/([0-9a-zA-Z-_]+)/)[1]
-            }else if(arg.startsWith('width:')) {
-                config.width = arg.slice(6).trim();
-            }else if(arg.startsWith('height:')) {
-                config.height = arg.slice(10).trim()=='true'?true:false;
+                postId = postURL.match(/https\:\/\/connect\.garmin\.com\/modern\/activity\/([0-9a-zA-Z-_]+)/)[1]
             }
         }
 
         // common argument "value"
         for (var i in args) {
-            var arg = args[i];
-            if(["true", "false"].indexOf(arg)>-1) {
-                config.is_captioned = ["true", "false"].indexOf(arg)==0? true : false;
-            }else if(postId.length==0 && arg.match(/https\:\/\/www\.connect\.garmin\.com\/modern\/activity\/[0-9a-zA-Z-_]+/)) {
-                postId = arg.match(/https\:\/\/www\.connect\.garmin\.com\/modern\/activity\/([0-9a-zA-Z-_]+)/)[1];
+            var arg = args[i].trim();
+            if(postId.length==0 && arg.match(/https\:\/\/connect\.garmin\.com\/modern\/activity\/[0-9a-zA-Z-_]+/)) {
+                postId = arg.match(/https\:\/\/connect\.garmin\.com\/modern\/activity\/([0-9a-zA-Z-_]+)/)[1];
             }else if(postId.length==0 && arg.length>4 && arg.match(/([0-9a-zA-Z-_]+)/)) {
                 postId = arg.match(/([0-9a-zA-Z-_]+)/)[1];
-            }else if(arg.length < 4 && arg.match(/([0-9]+\%)/)) {
-                config.width = arg.match(/([0-9]+\%)/)[1];
             }
         }
         if(postId.length==0) return returnHTML;
          
         // generate html
         if(postId != ""){
-                returnHTML = '<div class="instagram-wrapper"><iframe src=\'https://connect.garmin.com/modern/activity/embed/'+postId+'\' width=\'465\' height=\'500\' frameborder=\'0\'></iframe>';
+                returnHTML = '<div class="garmin-wrapper"><iframe src=\'https://connect.garmin.com/modern/activity/embed/'+postId+'\' width=\'465\' height=\'500\' frameborder=\'0\'></iframe>';
         }
           return returnHTML;
 },{
