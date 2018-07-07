@@ -4,7 +4,13 @@
   "main": "index",
   "dependencies": {},
   "description": "Embed garmin connect activity tag plugin for Hexo.",
-  "devDependencies": {},
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0"
+  },
+  "scripts": {
+    "test": "mocha **/*.spec.js" 
+  },
   "directories": {},
   "author": {
     "email": "me@alexmufatti.it",

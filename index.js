@@ -1,8 +1,6 @@
 'use strict';
 
-hexo.extend.tag.register('garmin', function(args, content){
-
-        var config = hexo.config.tagGarmin || {};
+var garmin = function(args, content){
 
         var postId = "";
         var returnHTML = "";
@@ -34,8 +32,16 @@ hexo.extend.tag.register('garmin', function(args, content){
                 returnHTML = '<div class="garmin-wrapper"><iframe src=\'https://connect.garmin.com/modern/activity/embed/'+postId+'\' width=\'465\' height=\'500\' frameborder=\'0\'></iframe>';
         }
           return returnHTML;
-},{
-  async: true,
-  ends: false
-});
+};
+
+if (typeof hexo === 'object') {
+  hexo.extend.tag.register('garmin', garmin ,{
+    async: true,
+    ends: false
+  });
+}
+
+if ( typeof module === 'object' && module.exports) {
+    module.exports.garmin = garmin;
+}
 
