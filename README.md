@@ -1,32 +1,27 @@
-# hexo-tag-instagram
+# hexo-tag-garminconnect
 
-Simply Embed Instagram photo and movie tag plugin for [Hexo](https://github.com/hexojs/hexo).
+Simply Embed Garmin Connect activity tag plugin for [Hexo](https://github.com/hexojs/hexo).
 
 ## Introduction
 
-This is a Hexo tag plugin which allows you to simply embed Instagram photo on your blog posts.
+This is a Hexo tag plugin which allows you to simply embed Garmin activities to you blog.
 
 ## DEMO
 
-- [https://photo-tea.com/p/hexo-tag-instagram/](https://photo-tea.com/p/hexo-tag-instagram/)
-- [https://blog.eson.org/pub/fc959554/](https://blog.eson.org/pub/fc959554/)
 
 ## Installation
 
-```
-npm install hexo-tag-instagram --save
-```
 
 ## Usage
 
 ```
-{% instagram post-url %}
+{% garmin post-url %}
 ```
 
 or
 
 ```
-{% instagram shortcode %}
+{% garmin shortcode %}
 ```
 
 ## Example
@@ -48,8 +43,8 @@ Also, the above example can coding differently.
 
 This plugin can specify the following options.
 
-- captioned
 - width
+- height
 
 ## caption & size
 
@@ -60,7 +55,7 @@ Please edit your `_config.yml` as following example.
 ```
 # captioned: false. Hide the captions of all instagrams.
 # width: set the width of all instagrams
-tagInstagram:
+tagGarmin:
   captioned: false
   width: 50%
 ```
@@ -68,7 +63,7 @@ tagInstagram:
 Also, can customize individually by posts. please edit your `your-posts-markdown.md` as following example.
 
 ```
-{% instagram false 50% https://www.instagram.com/p/BXkz1bYB1-N/ %}
+{% garmin false 50% https://www.instagram.com/p/BXkz1bYB1-N/ %}
 ```
 
 ## License
@@ -76,3 +71,7 @@ Also, can customize individually by posts. please edit your `your-posts-markdown
 MIT
 
 [Hexo]: http://hexo.io/
+
+## Thanks
+Inspired by the work of tea3 [hexo-tag-instagram](https://github.com/tea3/hexo-tag-instagram)
+

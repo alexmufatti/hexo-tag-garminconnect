@@ -3,8 +3,6 @@
 hexo.extend.tag.register('garmin', function(args, content){
 
         var config = hexo.config.tagGarmin || {};
-        config.width = config.width || "100%";
-        config.is_captioned = config.captioned || true;
 
         var postId = "";
         var returnHTML = "";
@@ -16,11 +14,11 @@ hexo.extend.tag.register('garmin', function(args, content){
                 postId = arg.slice(3).trim();
             }else if(arg.startsWith('url:')) {
                 var postURL = arg.slice(4).trim();
-                postId = postURL.match(/https\:\/\/www\.instagram\.com\/p\/([0-9a-zA-Z-_]+)/)[1]
+                postId = postURL.match(/https\:\/\/www\.connect\.garmin\.com\/modern\/activity\/([0-9a-zA-Z-_]+)/)[1]
             }else if(arg.startsWith('width:')) {
                 config.width = arg.slice(6).trim();
-            }else if(arg.startsWith('captioned:')) {
-                config.is_captioned = arg.slice(10).trim()=='true'?true:false;
+            }else if(arg.startsWith('height:')) {
+                config.height = arg.slice(10).trim()=='true'?true:false;
             }
         }
 
@@ -29,8 +27,8 @@ hexo.extend.tag.register('garmin', function(args, content){
             var arg = args[i];
             if(["true", "false"].indexOf(arg)>-1) {
                 config.is_captioned = ["true", "false"].indexOf(arg)==0? true : false;
-            }else if(postId.length==0 && arg.match(/https\:\/\/www\.instagram\.com\/p\/[0-9a-zA-Z-_]+/)) {
-                postId = arg.match(/https\:\/\/www\.instagram\.com\/p\/([0-9a-zA-Z-_]+)/)[1];
+            }else if(postId.length==0 && arg.match(/https\:\/\/www\.connect\.garmin\.com\/modern\/activity\/[0-9a-zA-Z-_]+/)) {
+                postId = arg.match(/https\:\/\/www\.connect\.garmin\.com\/modern\/activity\/([0-9a-zA-Z-_]+)/)[1];
             }else if(postId.length==0 && arg.length>4 && arg.match(/([0-9a-zA-Z-_]+)/)) {
                 postId = arg.match(/([0-9a-zA-Z-_]+)/)[1];
             }else if(arg.length < 4 && arg.match(/([0-9]+\%)/)) {

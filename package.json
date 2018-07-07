@@ -1,35 +1,36 @@
 {
-  "name": "hexo-tag-instagram",
-  "version": "1.1.0",
+  "name": "hexo-tag-garminconnect",
+  "version": "0.1.0",
   "main": "index",
   "dependencies": {},
-  "description": "Embed instagram photo and movie tag plugin for Hexo.",
+  "description": "Embed garmin connect activity tag plugin for Hexo.",
   "devDependencies": {},
   "directories": {},
   "author": {
-    "email": "tea3gtinfo@gmail.com",
-    "name": "tea3",
-    "url": "https://photo-tea.com/"
+    "email": "me@alexmufatti.it",
+    "name": "Alex Mufatti",
+    "url": "https://alexmufatti.it/"
   },
   "bugs": {
-    "url": "https://github.com/tea3/hexo-tag-instagram/issues"
+    "url": "https://github.com/alexmufatti/hexo-tag-garminconnect/issues"
   },
   "keywords": [
     "hexo",
     "tag",
-    "instagram",
+    "garmin",
+    "garminconnct"
     "embed",
     "blog"
   ],
   "license": "MIT",
   "maintainers": [
     {
-      "name": "tea3gt",
-      "email": "tea3gtinfo@gmail.com"
+      "name": "Alex Mufatti",
+      "email": "me@alexmufatti.it"
     }
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tea3/hexo-tag-instagram.git"
+    "url": "git+https://github.com/alexmufatti/hexo-tag-garminconnect.git"
   }
 }
