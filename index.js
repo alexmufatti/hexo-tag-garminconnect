@@ -1,3 +1,5 @@
+'use strict';
+
 var garmin = function(args, content){
 
         var postId = "";
