@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/alexmufatti/hexo-tag-garminconnect.svg?branch=master)](https://travis-ci.org/alexmufatti/hexo-tag-garminconnect)
+
 # hexo-tag-garminconnect
 
 Simply Embed Garmin Connect activity tag plugin for [Hexo](https://github.com/hexojs/hexo).

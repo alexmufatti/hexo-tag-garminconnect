@@ -1,2 +1,10 @@
 language: node_js
-node_js: "node"
+node_js: node
+deploy:
+  provider: npm
+  email: me@alexmufatti.it
+  api_key:
+    secure: GPkkpvbxzl/3Dxb7fTAIx8jgVIFwLPgidwU/HaodhnhIIM5lZlQRSL1JX4tMQlxO6dSBDjmJ0O4i6GE0XS9bRKM+WKCBNQGjNd5h76FidrrwFbpZPjRSimlWOycKnIOP0zBm/xNO9wl6VqEZf0yOhR04buE+ZWqvJ3CjEEI73nYWvTxo+sJEK8wHKAoVRmAI92NYRfLJrdXJOkvikwUUCvCwPjmShEH2KFTsUAooG4ETDRAF7v3ywmJ0Eqw/ssTNs03oIY67GwKrF/HIC4K5+8+Wui3cCalubhu5qEBkdgIV0jkoiGtQVUU+1dm/GpHDk7tWtjtvvxlxjrKqq0dZvMIdMD2x++cgN1ym8fGU9PkE0NaB/Y/25ymw+O7ucZa33nrRwN5IIZtZxvsqRTuogKqFXvJr91QM9WzTgkNuBXGVtHAHNTj0bsk9kESBKdqKbGzAT+eYxuXd8joeNWkSrHatYDW5rA8oK+mpEsIg20GozqLm8oIo6tpsSAGYv8KN9S3B3E6z+OmB/nlXnqUaGVr1w9ER+E0Rz0WnPf/hSnkr4SfyWThb3GaFZi5CJcFbS4ID+pyY66EEvLTGQTMW2QUTlDyxDOqkzzgNfbRcEypxzGSGkWedn9Hz8cRhFcgQAYzyl+ZgriJkQiHfNIATL3dv3xRX6ALTADym1apS8ik=
+  on:
+    tags: true
+    repo: alexmufatti/hexo-tag-garminconnect
